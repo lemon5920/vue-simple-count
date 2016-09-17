@@ -9,7 +9,7 @@ Vue-router 實現 SPA (Single Page Application)，
 Vuex 讓資料傳遞更方便。  
 
 範例參考 [Vuex](https://github.com/vuejs/vuex)   
-1. [counter-hot](https://github.com/vuejs/vuex/tree/master/examples/counter-hot)
+1. [counter-hot](https://github.com/vuejs/vuex/tree/master/examples/counter-hot)  
 2. [shopping-cart](https://github.com/vuejs/vuex/tree/master/examples/shopping-cart)
 
 ## Build Setup
