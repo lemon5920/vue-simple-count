@@ -4,6 +4,9 @@
   <button @click="decrement">-</button>
   <button @click="incrementIfOdd">Increment if odd</button>
   <button @click="incrementAsync">Increment async</button>
+  <br>
+  <input type="text" v-model="val">
+  <button @click="incrementNum(val)">Increment Number</button>
 </template>
 
 <script>
@@ -15,6 +18,11 @@ export default {
   vuex: {
     // template 可以跟使用 methods 一樣的方式來使用 actions
     actions
+  },
+  data () {
+    return {
+      val: 0
+    }
   }
 }
 </script>

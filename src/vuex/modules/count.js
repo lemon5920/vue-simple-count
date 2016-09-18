@@ -5,7 +5,8 @@
 // 引入需要的 mutation types
 import {
   INCREMENT,
-  DECREMENT
+  DECREMENT,
+  INCREMENT_NUM
 } from '../mutation-types'
 
 const state = {
@@ -23,6 +24,9 @@ const mutations = {
   [DECREMENT] (state) {
     state.count--
     state.history.push('decrement')
+  },
+  [INCREMENT_NUM] (state, mutation) {
+    state.count += mutation.payload
   }
 }
 

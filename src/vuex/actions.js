@@ -2,7 +2,7 @@
 // 用於 dispatching mutations 來改變 state。
 
 // 引入需要的 mutation types
-import { INCREMENT, DECREMENT } from './mutation-types'
+import { INCREMENT, DECREMENT, INCREMENT_NUM } from './mutation-types'
 
 export const increment = ({ dispatch }) => dispatch(INCREMENT)
 
@@ -18,4 +18,11 @@ export const incrementAsync = ({ dispatch }) => {
   setTimeout(() => {
     dispatch(INCREMENT)
   }, 1000)
+}
+
+export const incrementNum = ({ dispatch }, val) => {
+  dispatch({
+    type: INCREMENT_NUM,
+    payload: parseInt(val)
+  })
 }
