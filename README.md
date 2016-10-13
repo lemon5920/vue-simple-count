@@ -12,26 +12,22 @@ Vuex 讓資料傳遞更方便。
 1. [counter-hot](https://github.com/vuejs/vuex/tree/master/examples/counter-hot)  
 2. [shopping-cart](https://github.com/vuejs/vuex/tree/master/examples/shopping-cart)
 
+## 2016/10/13 Yarn
+使用 Yarn 管理套件，Speed Up Up 、套件版本統一。  
+如果還沒安裝 Yarn，執行：  
+`curl -o- -L https://yarnpkg.com/install.sh | bash`  
+
 ## Build Setup
 
 ``` bash
 # install dependencies
-npm install
+yarn
 
 # serve with hot reload at localhost:8080
-npm run dev
+yarn run dev
 
 # build for production with minification
-npm run build
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
+yarn run build
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
