@@ -11,22 +11,42 @@ import {
 
 const state = {
   count: 0,
-  history: []
+  history: [],
+  countStatus: true
 }
 
 // mutaions type 名稱以全大寫命名為原則，
 // 來與 actions 作區別
 const mutations = {
   [INCREMENT] (state) {
-    state.count++
-    state.history.push('increment')
+    state.countStatus = false
+    setTimeout(function () {
+      state.count++
+      state.history.push('increment')
+    }, 200)
+    setTimeout(function () {
+      state.countStatus = true
+    }, 400)
   },
   [DECREMENT] (state) {
-    state.count--
-    state.history.push('decrement')
+    state.countStatus = false
+    setTimeout(function () {
+      state.count--
+      state.history.push('decrement')
+    }, 200)
+    setTimeout(function () {
+      state.countStatus = true
+    }, 400)
   },
   [INCREMENT_NUM] (state, mutation) {
-    state.count += mutation.payload
+    state.countStatus = false
+    setTimeout(function () {
+      state.count += mutation.payload
+      state.history.push('increment')
+    }, 200)
+    setTimeout(function () {
+      state.countStatus = true
+    }, 400)
   }
 }
 
