@@ -3,14 +3,10 @@
 // mutations 由 actions 觸發。
 
 // 引入需要的 mutation types
-import {
-  INCREMENT,
-  DECREMENT,
-  INCREMENT_NUM
-} from '../mutation-types'
+import * as types from '../mutation-types'
 
 const state = {
-  count: 0,
+  countNum: 0,
   history: [],
   countStatus: true
 }
@@ -18,30 +14,30 @@ const state = {
 // mutaions type 名稱以全大寫命名為原則，
 // 來與 actions 作區別
 const mutations = {
-  [INCREMENT] (state) {
+  [types.INCREMENT] (state) {
     state.countStatus = false
     setTimeout(function () {
-      state.count++
+      state.countNum++
       state.history.push('increment')
     }, 200)
     setTimeout(function () {
       state.countStatus = true
     }, 400)
   },
-  [DECREMENT] (state) {
+  [types.DECREMENT] (state) {
     state.countStatus = false
     setTimeout(function () {
-      state.count--
+      state.countNum--
       state.history.push('decrement')
     }, 200)
     setTimeout(function () {
       state.countStatus = true
     }, 400)
   },
-  [INCREMENT_NUM] (state, mutation) {
+  [types.INCREMENT_NUM] (state, mutation) {
     state.countStatus = false
     setTimeout(function () {
-      state.count += mutation.payload
+      state.countNum += mutation.payload
       state.history.push('increment')
     }, 200)
     setTimeout(function () {
