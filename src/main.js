@@ -1,15 +1,14 @@
 import Vue from 'vue'
-import Router from 'vue-router'
-
-// 路由表
-import routerMap from './router'
+import store from './store'
+import router from './router'
 
 // root component
 import App from './App'
 
-// install Router & 使用路由表
-Vue.use(Router)
-const router = new Router()
-routerMap(router)
-
-router.start(App, '#root')
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  router,
+  store,
+  render: h => h(App)
+})
