@@ -17,6 +17,9 @@ Vuex 讓資料傳遞更方便。
 如果還沒安裝 Yarn，執行：  
 `curl -o- -L https://yarnpkg.com/install.sh | bash`  
 
+## 2016/10/19
+Upgrade to vue 2.0.
+
 ## Build Setup
 
 ``` bash
