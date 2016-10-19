@@ -1,9 +1,17 @@
-export default function (router) {
-  router.map({
-    '/': {
-      // 設定 name 能夠更明確的被指定
+import Vue from 'vue'
+import Router from 'vue-router'
+
+import helloPage from './components/hello'
+
+Vue.use(Router)
+
+export default new Router({
+  mode: 'history',
+  routes: [
+    {
+      path: '/',
       name: 'index',
-      component: require('./components/hello.vue')
+      component: helloPage
     }
-  })
-}
+  ]
+})
